@@ -12,10 +12,6 @@ data class Graffiti(
 
 data class GraffitiAttachment(
     override val content: Graffiti
-) : Attachment(content) {
-    init {
-        type = "graffiti"
-    }
-
+) : Attachment("graffiti", content) {
     fun getGraffiti() : Graffiti = content
 }

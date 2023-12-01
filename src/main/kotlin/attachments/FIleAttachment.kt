@@ -13,10 +13,6 @@ data class File(
 
 data class FileAttachment(
     override val content: File
-) : Attachment(content) {
-    init {
-        type = "file"
-    }
-
+) : Attachment("file", content) {
     fun getFile() : File = content
 }

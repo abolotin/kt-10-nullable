@@ -1,6 +1,6 @@
 package ru.netology.attachments
 
-abstract class Attachment(content: Content) {
+abstract class Attachment(val type : String, content: Content) {
     abstract class Content(
         id: Int,
         ownerId: Int,
@@ -11,6 +11,5 @@ abstract class Attachment(content: Content) {
         open var date = date
     }
 
-    var type: String = ""
     open val content = content
 }

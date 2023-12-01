@@ -15,10 +15,6 @@ data class Video(
 
 data class VideoAttachment(
     override val content: Video
-) : Attachment(content) {
-    init {
-        type = "video"
-    }
-
+) : Attachment("video", content) {
     fun getVideo() : Video = content
 }

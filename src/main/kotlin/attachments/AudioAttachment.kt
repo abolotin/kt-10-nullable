@@ -17,10 +17,6 @@ data class Audio(
 
 data class AudioAttachment(
     override val content: Audio
-) : Attachment(content) {
-    init {
-        type = "audio"
-    }
-
+) : Attachment("audio", content) {
     fun getAudio() : Audio = content
 }

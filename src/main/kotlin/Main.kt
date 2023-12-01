@@ -54,7 +54,7 @@ object WallService {
     }
 
     fun clear() {
-        posts = emptyArray();
+        posts = emptyArray()
     }
 }
 
